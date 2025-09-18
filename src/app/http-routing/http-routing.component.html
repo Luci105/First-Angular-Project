@@ -1,2 +1,32 @@
-<p>http-routing works!</p>
-<p>Click "Users" to see data from API.</p>
+<h2>Users</h2>
+
+<button (click)="fetchUsers()">Load Users</button>
+
+<p *ngIf="loading">fetching data...</p>
+
+<table border="1" cellpadding="5" cellspacing="0">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Show message when no users -->
+        <tr *ngIf="users.length === 0">
+            <td colspan="5" style="text-align:center;">No records found</td>
+        </tr>
+
+        <!-- Show rows when users are available -->
+        <tr *ngFor="let user of users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.phone }}</td>
+            <td>{{ user.company.name }}</td>
+        </tr>
+    </tbody>
+</table>
