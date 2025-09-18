@@ -1,0 +1,21 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Bhalchandra",
+            "role": "Admin"
+        },
+        {
+            "id": 2,
+            "name": "Ravi",
+            "role": "User"
+        }
+    ],
+    "posts": [
+        {
+            "id": 1,
+            "title": "Angular Basics",
+            "content": "Learn components"
+        }
+    ]
+}
