@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class GlobalServiceService {
-
+  message = 'Hello from Service';
   constructor() { }
 }

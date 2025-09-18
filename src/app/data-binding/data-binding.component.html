@@ -1,4 +1,30 @@
-<p>data-binding works!</p>
-<label for="data-binding">Two Way Data binding</label>
+<p>How data-binding works!</p>
+<label for="interpolation">1. interpolation is like string replacement in templates → <strong>{{ title }}</strong> is
+    read-only (you can't assign inside it).</label>
+<h1>{{ title }}</h1>
+<!-- interpolation is like string replacement in templates → {{ value }} is read-only (you can’t assign inside it). -->
+<p>Hello, my name is {{ user.name }} and I am {{ user.age }} years old.</p>
+
+<hr />
+
+<label for="Property-binding">2. Property Binding : </label>
+<!-- Property binding for src -->
+<img [src]="imageUrl" alt="Random Image">
+
+<!-- Property binding for disabled -->
+<button [disabled]="isDisabled">Click Me</button>
+<p>the difference between HTML attribute vs DOM property:
+
+    disabled="true" → always disables
+
+    [disabled]="isDisabled" → dynamic, changes with TS variable</p>
+<hr />
+<label for="Event">2. Event Binding : </label>
+<p>Counter: {{ counter }}</p>
+
+<button (click)="increase()">+</button>
+<button (click)="decrease()">-</button>
+<hr />
+<label for="data-binding">4. Two Way Data binding : </label>
 <input type="text" name="name" id="name" [(ngModel)]="name">
 {{name}}

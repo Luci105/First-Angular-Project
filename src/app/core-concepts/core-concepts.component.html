@@ -1,0 +1,44 @@
+<p>1. How angular core-concepts works!</p>
+<!-- *ngIf -->
+<p *ngIf="isLoggedIn">Welcome back, user!</p>
+<p *ngIf="!isLoggedIn">Please login</p>
+
+<!-- *ngFor -->
+<ul>
+    <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+
+<hr>
+<p>a. Intermediate Concept</p>
+<button (click)="show = !show">{{show ? "Hide" : "Show"}}</button> <span> <------ this button controls the core *NgIf attribute dynamically </span>
+<p>below list is created using *ngFor 👇</p>
+<div *ngIf="show; else noData">
+    <ul>
+        <li *ngFor="let f of fruits">
+            {{ f | uppercase }} - {{ price | currency:'INR' }} - {{ today | date:'dd MMM yyyy' }}
+        </li>
+    </ul>
+</div>
+<ng-template #noData>No fruits</ng-template>
+👉 *ngIf shows/hides, *ngFor loops, currency pipe formats number, date pipe formats date.
+
+<hr>
+2. Attribute Directives ([style], [class])
+👉 Change appearance/behavior of elements.
+<button (click)="isActive = !isActive">{{"change"}}</button> <span> <------ this button controls the core *NgIf attribute dynamically </span>
+<p [style.color]="isActive ? 'green' : 'red'">Status Text syntax ---> [style.color]="isActive ? 'green' : 'red'"</p>
+<p [class.active]="isActive">Active User</p>
+<p [ngClass]="{someClass: isActive}">Change User color using NgClass attribute </p>
+Output: Text turns green if active, otherwise red.
+
+<hr>
+3. Built-in pipes, custom pipe
+<p>Original: {{ longText }}</p>
+<p>Truncated (default): {{ longText | truncate }}</p>
+<p>Truncated (limit 10): {{ longText | truncate:10 }}</p>
+
+
+<hr>
+4. Service Value 
+<br>
+<p><strong>'{{globalService.message}}'</strong> <----- this is coming from service</p>

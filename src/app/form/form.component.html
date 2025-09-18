@@ -1,0 +1,19 @@
+<p>form works!</p>
+<p>
+    Template Driven Form
+</p>
+<form #f="ngForm" (ngSubmit)="submit(f)">
+    <input name="name" ngModel required>
+    <button [disabled]="f.invalid">Save</button>
+</form>
+
+<hr>
+
+<p>
+    Reactive Form 
+</p>
+<form [formGroup]="form" (ngSubmit)="submit2()">
+    <input formControlName="name" placeholder="Name">
+    <p>Date of Birth: {{ form.get('dob')?.value | date:'fullDate' }}</p>
+    <button>Save</button>
+</form>
