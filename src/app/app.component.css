@@ -1,3 +1,46 @@
 section {
     padding: 20px;
+    padding-bottom: 50px;
+    background-color: white;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #222;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+footer nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #fff;
+}
+footer nav a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+
+footer nav a:hover {
+  color: #00d8ff; /* changes text color on hover */
+}
+
+/* underline animation */
+footer nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #00d8ff;
+  transition: width 0.3s ease;
+}
+
+footer nav a:hover::after {
+  width: 100%;
 }
