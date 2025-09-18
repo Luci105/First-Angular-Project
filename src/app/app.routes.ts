@@ -5,6 +5,7 @@ import { CoreConceptsComponent } from './core-concepts/core-concepts.component';
 import { FormComponent } from './form/form.component';
 import { HttpRoutingComponent } from './http-routing/http-routing.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
+import { MaterialComponent } from './material/material.component';
 
 export const routes: Routes = [
     {
@@ -24,5 +25,8 @@ export const routes: Routes = [
     },
     {
         path : "users",component : HttpRoutingComponent
+    },
+    {
+        path : "material",component : MaterialComponent
     }
 ];
