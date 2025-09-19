@@ -7,3 +7,8 @@
 .user-card {
   border-radius: 12px;
 }
+.active-btn {
+  border: 2px solid #3f51b5; /* primary blue border */
+  background-color: #e8eaf6; /* light indigo background */
+  font-weight: bold;
+}

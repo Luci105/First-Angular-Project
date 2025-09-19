@@ -12,9 +12,6 @@ export const routes: Routes = [
         path : '' , component : FirstComponentComponent
     },
     {
-        path: "home", component: HomeComponent
-    },
-    {
         path: "data", component: DataBindingComponent
     },
     {

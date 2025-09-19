@@ -15,8 +15,7 @@ import { MatCardModule } from '@angular/material/card';
 export class MaterialComponent {
   users: any[] = [];
   loading = false;
-  viewMode: 'table' | 'card' = 'table'; // default table view
-
+  currentView: 'table' | 'card' = 'table'; // default
   displayedColumns: string[] = ['id', 'name', 'email', 'phone', 'company'];
 
   constructor(private http: HttpClient) { }
@@ -37,6 +36,6 @@ export class MaterialComponent {
   }
 
   toggleView(mode: 'table' | 'card') {
-    this.viewMode = mode;
+    this.currentView = mode;
   }
 }
